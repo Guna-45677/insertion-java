@@ -1,0 +1,30 @@
+class insertion{
+    void insertionsort(int a[],int n){
+        for(int i=1;i<n;i++){
+            int temp=a[i];
+            int j;
+            j=i-1;
+            while(j>=0 && a[j]>temp){
+                a[j+1]=a[j];
+                j--;
+            }
+            a[j+1]=temp;           
+        }
+    }
+    void display(int a[],int n){
+        for(int i=0;i<n;i++){
+            System.out.println(a[i]+"");
+        }
+    }
+    public static void main(String args[]){
+        int []a={7,8,9,2,1};
+        int n=a.length;
+        insertion s=new insertion();
+        System.out.println("Given array");
+        s.display(a,n);
+        s.insertionsort(a,n);
+        System.out.println("Given array");
+        s.display(a,n);
+
+    }
+}
